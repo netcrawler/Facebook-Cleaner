@@ -137,7 +137,7 @@ module Facebook
       @a.get(MOBILE_URL) do |page|
         sleep(SLEEP_TIME)
         @home = page.form_with(:action => "https://login.facebook.com/login.php?m=m") do |f|
-          f.email  = @email
+          f.email = @email
           f.pass = @password
         end.submit
       end
